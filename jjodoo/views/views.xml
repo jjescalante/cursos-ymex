@@ -1,10 +1,9 @@
 <odoo>
-  <data>
     <!-- explicit list view definition -->
     <!--
-    <record model="ir.ui.view" id="jjodoo.list">
-      <field name="name">jjodoo list</field>
-      <field name="model">jjodoo.jjodoo</field>
+    <record model="ir.ui.view" id="openacademy.list">
+      <field name="name">openacademy list</field>
+      <field name="model">openacademy.openacademy</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
@@ -15,20 +14,21 @@
     </record>
     -->
 
-    <!-- actions opening views on models -->
-    <!--
-    <record model="ir.actions.act_window" id="jjodoo.action_window">
-      <field name="name">jjodoo window</field>
-      <field name="res_model">jjodoo.jjodoo</field>
+     <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="course_list_action">
+      <field name="name">Database</field>
+      <field name="res_model">jjodoo.query</field>
       <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">Create the first course</p>
+      </field>
     </record>
-    -->
 
-    <!-- server action to the one above -->
+     <!-- server action to the one above -->
     <!--
-    <record model="ir.actions.server" id="jjodoo.action_server">
-      <field name="name">jjodoo server</field>
-      <field name="model_id" ref="model_jjodoo_jjodoo"/>
+    <record model="ir.actions.server" id="openacademy.action_server">
+      <field name="name">openacademy server</field>
+      <field name="model_id" ref="model_openacademy_openacademy"/>
       <field name="state">code</field>
       <field name="code">
         action = {
@@ -40,21 +40,16 @@
     </record>
     -->
 
-    <!-- Top menu item -->
-    <!--
-    <menuitem name="jjodoo" id="jjodoo.menu_root"/>
-    -->
+     <!-- Top menu item -->
+    <menuitem name="YUSA AUTOPARTS MEXICO" id="main_database_menu"/>
     <!-- menu categories -->
-    <!--
-    <menuitem name="Menu 1" id="jjodoo.menu_1" parent="jjodoo.menu_root"/>
-    <menuitem name="Menu 2" id="jjodoo.menu_2" parent="jjodoo.menu_root"/>
-    -->
+    <menuitem name="Data Base" id="database_menu" parent="main_database_menu"/>
+    <menuitem name="Menu" id="data_menu" parent="database_menu" action="course_list_action"/>
     <!-- actions -->
     <!--
-    <menuitem name="List" id="jjodoo.menu_1_list" parent="jjodoo.menu_1"
-              action="jjodoo.action_window"/>
-    <menuitem name="Server to list" id="jjodoo" parent="jjodoo.menu_2"
-              action="jjodoo.action_server"/>
+    <menuitem name="List" id="openacademy.menu_1_list" parent="openacademy.menu_1"
+              action="openacademy.action_window"/>
+    <menuitem name="Server to list" id="openacademy" parent="openacademy.menu_2"
+              action="openacademy.action_server"/>
     -->
-  </data>
 </odoo>

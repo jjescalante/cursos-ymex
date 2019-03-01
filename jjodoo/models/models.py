@@ -2,6 +2,12 @@
 
 from odoo import models, fields, api
 
+class Query(models.Model):
+    _name = 'jjodoo.query'
+
+    name = fields.Char(string="Title", required=True)
+    description = fields.Text()
+
 # class jjodoo(models.Model):
 #     _name = 'jjodoo.jjodoo'
 
