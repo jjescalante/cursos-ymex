@@ -14,9 +14,6 @@
                     <page string="Description">
                         <field name="description"/>
                     </page>
-                     <page string="Roster">
-                        <field name="roster_emp"/>
-                    </page>
                 </notebook>
             </form>
         </field>
@@ -64,9 +61,11 @@
                         <field name="start_date"/>
                         <field name="end_date"/>
                         <field name="duration"/>
-                        <field name="instructor"/>
+                        <field name="responsible_id"/>
+                        <field name="instructor_id"/>
                         <field name="company"/>
                         <field name="code"/>
+                        <field name="atendees_ids"/>
                     </group>
                 </sheet>
             </form>
@@ -81,10 +80,21 @@
                 <field name="start_date"/>
                 <field name="end_date"/>
                 <field name="duration"/>
-                <field name="instructor"/>
+                <field name="responsible_id"/>
+                <field name="instructor_id"/>
                 <field name="company"/>
                 <field name="code"/>
+                <field name="atendees_ids"/>
             </tree>
+        </field>
+    </record>
+     <record model="ir.ui.view" id="courses_search_view">
+        <field name="name">courses.search</field>
+        <field name="model">jjodoo.courses</field>
+        <field name="arch" type="xml">
+            <search string="Courses Search">
+               <field name="course_name" string="Course Name"/>
+            </search>
         </field>
     </record>
 
@@ -93,7 +103,7 @@
       <field name="res_model">jjodoo.courses</field>
       <field name="view_mode">tree,form</field>
       <field name="help" type="html">
-      <p class="oe_view_nocontent_create">Create the first course</p>
+      <p class="oe_view_nocontent_create">Create the course</p>
       </field>
     </record>
     
@@ -128,13 +138,26 @@
             </tree>
         </field>
     </record>
+    
+    <record model="ir.ui.view" id="employees_search_view">
+        <field name="name">employees.search</field>
+        <field name="model">jjodoo.employees</field>
+        <field name="arch" type="xml">
+            <search string="Employees Search">
+               <field name="roster" string="Roster"/>
+               <field name="name" string="Name"/>
+               <field name="area" string="Area"/>
+               <field name="position" string="Position"/>
+            </search>
+        </field>
+    </record>
 
     <record model="ir.actions.act_window" id="employees_list_action">
       <field name="name">Employees</field>
       <field name="res_model">jjodoo.employees</field>
       <field name="view_mode">tree,form</field>
       <field name="help" type="html">
-      <p class="oe_view_nocontent_create">Create the first employee</p>
+      <p class="oe_view_nocontent_create">Create the employee</p>
       </field>
     </record>
     
