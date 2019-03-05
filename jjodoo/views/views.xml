@@ -1,21 +1,49 @@
 <odoo>
-    <!-- explicit list view definition -->
-    <!--
-    <record model="ir.ui.view" id="openacademy.list">
-      <field name="name">openacademy list</field>
-      <field name="model">openacademy.openacademy</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </tree>
-      </field>
+  <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="record_form_view">
+        <field name="name">record.form</field>
+        <field name="model">jjodoo.query</field>
+        <field name="arch" type="xml">
+            <form string="Report Form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+                <notebook>
+                    <page string="Description">
+                        <field name="description"/>
+                    </page>
+                     <page string="Roster">
+                        <field name="roster_emp"/>
+                    </page>
+                </notebook>
+            </form>
+        </field>
     </record>
-    -->
+    <record model="ir.ui.view" id="record_list_view">
+        <field name="name">record.list</field>
+        <field name="model">jjodoo.query</field>
+        <field name="arch" type="xml">
+            <tree string="Record Tree">
+                <field name="name" string="Reports"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+        <record model="ir.ui.view" id="record_search_view">
+        <field name="name">record.search</field>
+        <field name="model">jjodoo.query</field>
+        <field name="arch" type="xml">
+            <search string="Record Search">
+                <field name="name" string="Name Search"/>
+                <field name="description"/>
+            </search>
+        </field>
+    </record>
 
      <!-- actions opening views on models -->
-    <record model="ir.actions.act_window" id="course_list_action">
+    <record model="ir.actions.act_window" id="record_list_action">
       <field name="name">Database</field>
       <field name="res_model">jjodoo.query</field>
       <field name="view_mode">tree,form</field>
@@ -23,33 +51,100 @@
         <p class="oe_view_nocontent_create">Create the first database</p>
       </field>
     </record>
+    
+     <!-- Courses form view -->
+    <record model="ir.ui.view" id="courses_form_view">
+        <field name="name">courses.form</field>
+        <field name="model">jjodoo.courses</field>
+        <field name="arch" type="xml">
+            <form string="Courses Form">
+                <sheet>
+                    <group>
+                        <field name="course_name"/>
+                        <field name="start_date"/>
+                        <field name="end_date"/>
+                        <field name="duration"/>
+                        <field name="instructor"/>
+                        <field name="company"/>
+                        <field name="code"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="courses_tree_view">
+        <field name="name">courses.tree</field>
+        <field name="model">jjodoo.courses</field>
+        <field name="arch" type="xml">
+            <tree string="Courses Tree">
+                <field name="course_name"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="duration"/>
+                <field name="instructor"/>
+                <field name="company"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
 
-     <!-- server action to the one above -->
-    <!--
-    <record model="ir.actions.server" id="openacademy.action_server">
-      <field name="name">openacademy server</field>
-      <field name="model_id" ref="model_openacademy_openacademy"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
+    <record model="ir.actions.act_window" id="courses_list_action">
+      <field name="name">Courses</field>
+      <field name="res_model">jjodoo.courses</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+      <p class="oe_view_nocontent_create">Create the first course</p>
       </field>
     </record>
-    -->
+    
+     <!-- Employees form view -->
+    <record model="ir.ui.view" id="employees_form_view">
+        <field name="name">employees.form</field>
+        <field name="model">jjodoo.employees</field>
+        <field name="arch" type="xml">
+            <form string="Employees Form">
+                <sheet>
+                    <group>
+                        <field name="roster"/>
+                        <field name="name"/>
+                        <field name="date_admission"/>
+                        <field name="position"/>
+                        <field name="area"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="employees_tree_view">
+        <field name="name">employees.tree</field>
+        <field name="model">jjodoo.employees</field>
+        <field name="arch" type="xml">
+            <tree string="Employees Tree">
+              <field name="roster"/>
+              <field name="name"/>
+              <field name="date_admission"/>
+              <field name="position"/>
+              <field name="area"/>
+            </tree>
+        </field>
+    </record>
 
-     <!-- Top menu item -->
+    <record model="ir.actions.act_window" id="employees_list_action">
+      <field name="name">Employees</field>
+      <field name="res_model">jjodoo.employees</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+      <p class="oe_view_nocontent_create">Create the first employee</p>
+      </field>
+    </record>
+    
+
+    <!-- Top menu item -->
     <menuitem name="YUSA AUTOPARTS MEXICO" id="main_database_menu"/>
     <!-- menu categories -->
-    <menuitem name="Data Base" id="database_menu" parent="main_database_menu"/>
-    <menuitem name="Menu" id="data_menu" parent="database_menu" action="course_list_action"/>
-    <!-- actions -->
-    <!--
-    <menuitem name="List" id="openacademy.menu_1_list" parent="openacademy.menu_1"
-              action="openacademy.action_window"/>
-    <menuitem name="Server to list" id="openacademy" parent="openacademy.menu_2"
-              action="openacademy.action_server"/>
-    -->
+    <menuitem name="Menu" id="database_menu" parent="main_database_menu"/>
+    <menuitem name="Data Base" id="data_menu1" parent="database_menu" action="record_list_action"/>
+    <menuitem name="Courses" id="data_menu2" parent="database_menu" action="courses_list_action"/>
+    <menuitem name="Employees" id="data_menu3" parent="database_menu" action="employees_list_action"/>
+
 </odoo>
