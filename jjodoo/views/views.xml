@@ -14,6 +14,9 @@
                     <page string="Description">
                         <field name="description"/>
                     </page>
+                    <page string="Courses">
+                        <field name="session_ids2" nolbel="1"/>
+                    </page>
                 </notebook>
             </form>
         </field>
@@ -64,7 +67,7 @@
                         <field name="responsible_id"/>
                         <field name="instructor_id"/>
                         <field name="company"/>
-                        <field name="code"/>
+                        <field name="course_id"/>
                         <field name="atendees_ids"/>
                     </group>
                 </sheet>
@@ -83,7 +86,7 @@
                 <field name="responsible_id"/>
                 <field name="instructor_id"/>
                 <field name="company"/>
-                <field name="code"/>
+                <field name="course_id"/>
                 <field name="atendees_ids"/>
             </tree>
         </field>
@@ -122,6 +125,11 @@
                         <field name="area"/>
                     </group>
                 </sheet>
+                <!--<notebook>
+                    <page string="Courses">
+                        <field name="session_ids" nolbel="1"/>
+                    </page>
+                </notebook>-->
             </form>
         </field>
     </record>
