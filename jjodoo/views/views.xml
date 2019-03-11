@@ -64,11 +64,13 @@
                         <field name="start_date"/>
                         <field name="end_date"/>
                         <field name="duration"/>
-                        <field name="responsible_id"/>
-                        <field name="instructor_id"/>
+                        <!--<field name="hours"/>-->
+                        <field name="responsible_id" options="{'no_create': True}"/>
+                        <field name="instructor_id" options="{'no_create': True, 'no_open': True}"/>
                         <field name="company"/>
                         <field name="course_id"/>
-                        <field name="atendees_ids"/>
+                        <field name="attendees_ids"/>
+                        <field name="evidence"/>
                     </group>
                 </sheet>
             </form>
@@ -78,16 +80,18 @@
         <field name="name">courses.tree</field>
         <field name="model">jjodoo.courses</field>
         <field name="arch" type="xml">
-            <tree string="Courses Tree">
+            <tree string="Courses Tree" decoration-info="duration &lt; 5" decoration-danger="duration &gt; 15">
                 <field name="course_name"/>
                 <field name="start_date"/>
                 <field name="end_date"/>
                 <field name="duration"/>
+                <!--<field name="hours"/>-->
                 <field name="responsible_id"/>
                 <field name="instructor_id"/>
                 <field name="company"/>
                 <field name="course_id"/>
-                <field name="atendees_ids"/>
+                <field name="attendees_ids"/>
+                <field name="evidence"/>
             </tree>
         </field>
     </record>
@@ -100,11 +104,76 @@
             </search>
         </field>
     </record>
+    <record model="ir.ui.view" id="session_calendar_view">
+        <field name="name">courses.calendar</field>
+        <field name="model">jjodoo.courses</field>
+        <field name="arch" type="xml">
+            <calendar string="Session Calendar" date_start="start_date" date_stop="end_date" color="instructor_id">
+                <field name="course_name"/>
+            </calendar>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="session_graph_view">
+        <field name="name">courses.graph</field>
+        <field name="model">jjodoo.courses</field>
+        <field name="arch" type="xml">
+            <graph string="Participations by Courses">
+                <field name="course_name" type="row"/>
+                <field name="attendees_count" type="measure"/>
+            </graph>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="session_kanban_view">
+        <field name="name">courses.kanban</field>
+        <field name="model">jjodoo.courses</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="course_name">
+                <field name="color"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div
+                                t-attf-class="oe_kanban_color_{{kanban_getcolor(record.color.raw_value)}}
+                                              oe_kanban_global_click_edit oe_semantic_html_override
+                                              oe_kanban_card {{record.group_fancy==1 ? 'oe_kanban_card_fancy' : ''}}">
+                            <div class="oe_dropdown_kanban">
+                                <!--dropdown menu -->
+                                <div class="oe_dropdown_toggle">
+                                    <i class="fa fa-bars fa-lg"/>
+                                    <ul class="oe_dropdown_menu">
+                                        <li>
+                                           <a type="delete">Delete</a>
+                                        </li>
+                                        <li>
+                                            <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="oe_clear"></div>
+                            </div>
+                            <div t-attf-class="oe_kanban_content">
+                                <!-- title -->
+                                Session name:
+                                <field name="course_name"/>
+                                <br/>
+                                Start date:
+                                <field name="start_date"/>
+                                <br/>
+                                duration:
+                                <field name="duration"/>
+                                <br/>
+                                <field name="instructor_id"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
 
     <record model="ir.actions.act_window" id="courses_list_action">
       <field name="name">Courses</field>
       <field name="res_model">jjodoo.courses</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">tree,form,calendar,graph,kanban</field>
       <field name="help" type="html">
       <p class="oe_view_nocontent_create">Create the course</p>
       </field>
@@ -125,11 +194,11 @@
                         <field name="area"/>
                     </group>
                 </sheet>
-                <!--<notebook>
+                <notebook>
                     <page string="Courses">
-                        <field name="session_ids" nolbel="1"/>
+                        <field name="session_id" nolbel="1"/>
                     </page>
-                </notebook>-->
+                </notebook>
             </form>
         </field>
     </record>

@@ -1,0 +1,371 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* jjodoo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-08 04:27+0000\n"
+"PO-Revision-Date: 2019-03-07 23:06-0600\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_MX\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: jjodoo
+#: model:ir.ui.view,arch_db:jjodoo.session_kanban_view
+msgid ""
+"<br/>\n"
+"                                Start date:"
+msgstr ""
+"<br/>\n"
+"                                Start date:"
+
+#. module: jjodoo
+#: model:ir.ui.view,arch_db:jjodoo.session_kanban_view
+msgid ""
+"<br/>\n"
+"                                duration:"
+msgstr ""
+"<br/>\n"
+"                                duration:"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_employees_area
+#: model:ir.ui.view,arch_db:jjodoo.employees_search_view
+msgid "Area"
+msgstr "Area"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_res_partner_session_ids
+#: model:ir.model.fields,field_description:jjodoo.field_res_users_session_ids
+msgid "Attended Sessions"
+msgstr "Asistentes por sesión"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_courses_attendees_ids
+msgid "Attendees"
+msgstr "Asistentes"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_courses_attendees_count
+msgid "Attendees Count"
+msgstr "Numero de asistentes"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_courses_color
+msgid "Color"
+msgstr "Color"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_courses_company
+msgid "Company"
+msgstr "Compañía"
+
+#. module: jjodoo
+#: model:ir.ui.menu,name:jjodoo.configuration_menu
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: jjodoo
+#: model:ir.model,name:jjodoo.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: jjodoo
+#: model:ir.actions.act_window,name:jjodoo.contact_list_action
+#: model:ir.ui.menu,name:jjodoo.contact_menu
+msgid "Contacts"
+msgstr "Contactos"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_courses_course_id
+msgid "Course"
+msgstr "Curso"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_courses_course_name
+#: model:ir.ui.view,arch_db:jjodoo.courses_search_view
+msgid "Course Name"
+msgstr "Nombre del curso"
+
+#. module: jjodoo
+#: model:ir.actions.act_window,name:jjodoo.courses_list_action
+#: model:ir.ui.menu,name:jjodoo.data_menu2
+#: model:ir.ui.view,arch_db:jjodoo.record_form_view
+msgid "Courses"
+msgstr "Cursos"
+
+#. module: jjodoo
+#: model:ir.ui.view,arch_db:jjodoo.courses_form_view
+msgid "Courses Form"
+msgstr "Courses Form"
+
+#. module: jjodoo
+#: model:ir.ui.view,arch_db:jjodoo.courses_search_view
+msgid "Courses Search"
+msgstr "Courses Search"
+
+#. module: jjodoo
+#: model:ir.ui.view,arch_db:jjodoo.courses_tree_view
+msgid "Courses Tree"
+msgstr "Courses Tree"
+
+#. module: jjodoo
+#: model:ir.actions.act_window,help:jjodoo.courses_list_action
+msgid "Create the course"
+msgstr "Crea un curso"
+
+#. module: jjodoo
+#: model:ir.actions.act_window,help:jjodoo.employees_list_action
+msgid "Create the employee"
+msgstr "Da de alta un empleado"
+
+#. module: jjodoo
+#: model:ir.actions.act_window,help:jjodoo.record_list_action
+msgid "Create the first database"
+msgstr "Crea un codigo"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_courses_create_uid
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_employees_create_uid
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_query_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_courses_create_date
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_employees_create_date
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_query_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: jjodoo
+#: model:ir.ui.menu,name:jjodoo.data_menu1
+msgid "Data Base"
+msgstr "Base de datos"
+
+#. module: jjodoo
+#: model:ir.actions.act_window,name:jjodoo.record_list_action
+msgid "Database"
+msgstr "Base de datos"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_employees_date_admission
+msgid "Date Admission"
+msgstr "Fecha de ingreso"
+
+#. module: jjodoo
+#: model:ir.ui.view,arch_db:jjodoo.session_kanban_view
+msgid "Delete"
+msgstr "Borrar"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_query_description
+#: model:ir.ui.view,arch_db:jjodoo.record_form_view
+msgid "Description"
+msgstr "Descripción"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_courses_display_name
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_employees_display_name
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_query_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_courses_duration
+msgid "Duration"
+msgstr "Duración"
+
+#. module: jjodoo
+#: model:ir.model.fields,help:jjodoo.field_jjodoo_courses_duration
+msgid "Duration in days"
+msgstr "Duración en días"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_courses_hours
+msgid "Duration in hours"
+msgstr "Duración en horas"
+
+#. module: jjodoo
+#: model:ir.actions.act_window,name:jjodoo.employees_list_action
+#: model:ir.ui.menu,name:jjodoo.data_menu3
+msgid "Employees"
+msgstr "Empleados"
+
+#. module: jjodoo
+#: model:ir.ui.view,arch_db:jjodoo.employees_form_view
+msgid "Employees Form"
+msgstr "Employees Form"
+
+#. module: jjodoo
+#: model:ir.ui.view,arch_db:jjodoo.employees_search_view
+msgid "Employees Search"
+msgstr "Employees Search"
+
+#. module: jjodoo
+#: model:ir.ui.view,arch_db:jjodoo.employees_tree_view
+msgid "Employees Tree"
+msgstr "Employees Tree"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_courses_end_date
+msgid "End Date"
+msgstr "Fecha de fin"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_courses_id
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_employees_id
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_query_id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_courses_instructor_id
+msgid "Instructor´s Name"
+msgstr "Nombre del instructor"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_courses___last_update
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_employees___last_update
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_query___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_courses_write_uid
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_employees_write_uid
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_query_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_courses_write_date
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_employees_write_date
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_query_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: jjodoo
+#: model:ir.ui.menu,name:jjodoo.database_menu
+msgid "Menu"
+msgstr "Menu"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_employees_name
+#: model:ir.ui.view,arch_db:jjodoo.employees_search_view
+msgid "Name"
+msgstr "Nombre"
+
+#. module: jjodoo
+#: model:ir.ui.view,arch_db:jjodoo.record_search_view
+msgid "Name Search"
+msgstr "Name Search"
+
+#. module: jjodoo
+#: model:ir.ui.view,arch_db:jjodoo.session_graph_view
+msgid "Participations by Courses"
+msgstr "Participations by Courses"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_employees_position
+#: model:ir.ui.view,arch_db:jjodoo.employees_search_view
+msgid "Position"
+msgstr "Puesto"
+
+#. module: jjodoo
+#: model:ir.ui.view,arch_db:jjodoo.record_search_view
+msgid "Record Search"
+msgstr "Record Search"
+
+#. module: jjodoo
+#: model:ir.ui.view,arch_db:jjodoo.record_list_view
+msgid "Record Tree"
+msgstr "Record Tree"
+
+#. module: jjodoo
+#: model:ir.ui.view,arch_db:jjodoo.record_form_view
+msgid "Report Form"
+msgstr "Report Form"
+
+#. module: jjodoo
+#: model:ir.ui.view,arch_db:jjodoo.record_list_view
+msgid "Reports"
+msgstr "Reportes"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_courses_responsible_id
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_employees_roster
+#: model:ir.ui.view,arch_db:jjodoo.employees_search_view
+msgid "Roster"
+msgstr "Nómina"
+
+#. module: jjodoo
+#: model:ir.ui.view,arch_db:jjodoo.session_calendar_view
+msgid "Session Calendar"
+msgstr "Session Calendar"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_query_session_ids2
+msgid "Session Ids2"
+msgstr "Sesion"
+
+#. module: jjodoo
+#: model:ir.ui.view,arch_db:jjodoo.session_kanban_view
+msgid "Session name:"
+msgstr "Nombre de sesión:"
+
+#. module: jjodoo
+#: model:ir.ui.view,arch_db:jjodoo.partner_instructor_form_view
+msgid "Sessions"
+msgstr "Sesiones"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_courses_start_date
+msgid "Start Date"
+msgstr "Fecha de inicio"
+
+#. module: jjodoo
+#: sql_constraint:jjodoo.query:0
+msgid "The course title must be unique"
+msgstr "The course title must be unique"
+
+#. module: jjodoo
+#: sql_constraint:jjodoo.query:0
+msgid "The title of course should not be the description"
+msgstr "The title of course should not be the description"
+
+#. module: jjodoo
+#: model:ir.model.fields,field_description:jjodoo.field_jjodoo_query_name
+msgid "Title"
+msgstr "Título"
+
+#. module: jjodoo
+#: model:ir.ui.menu,name:jjodoo.main_database_menu
+msgid "YUSA AUTOPARTS MEXICO"
+msgstr "YUSA AUTOPARTS MEXICO"
+
+#. module: jjodoo
+#: model:ir.model,name:jjodoo.model_jjodoo_courses
+msgid "jjodoo.courses"
+msgstr "jjodoo.courses"
+
+#. module: jjodoo
+#: model:ir.model,name:jjodoo.model_jjodoo_employees
+msgid "jjodoo.employees"
+msgstr "jjodoo.employees"
+
+#. module: jjodoo
+#: model:ir.model,name:jjodoo.model_jjodoo_query
+msgid "jjodoo.query"
+msgstr "jjodoo.query"
