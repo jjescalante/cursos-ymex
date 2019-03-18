@@ -85,11 +85,13 @@ class Employees(models.Model):
     date_admission = fields.Date()
     position = fields.Char(string="Position", required=True)
     area = fields.Char(string="Area", required=True)
-    session_id = fields.Many2one('jjodoo.courses', ondelete="cascade")
-    #session_id = fields.One2Many(compute='_get_session', store=True)
+    #session_id = fields.Many2many('jjodoo.courses', 'course_id', store=True)
+    session_id = fields.Char(compute="_get_session", store=True)
     
-    #@api.depends('jjodoo.courses','attendees_ids')
-    #def _get_session(self):
-        #for record in self:
-            #record.session_id = record.attendees_ids
+    tagsids = []
     
+    def _get_session(self):
+        for record in self:
+            tagids = record.attendees_ids
+            record.write({'courses_id': [(6,0,tagids)]})
+            manuf_tagids = []
